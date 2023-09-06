@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/images/o-logo.png';
-import './Home.scss';
+import Logo from '../Logo/Logo';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
+import logoImage from '../../assets/images/o-logo.png';
+import './Home.scss';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -39,7 +40,7 @@ const Home = () => {
           <br />
           <span className={`${letterClass} _13`}>I</span>
           <span className={`${letterClass} _14`}>'m</span>
-          <img src={Logo} alt="developer" />
+          <img src={logoImage} alt="developer" />
           <AnimatedLetters
             letterClass={letterClass}
             strArray={nameArray}
@@ -58,6 +59,7 @@ const Home = () => {
           CONTACT ME
         </Link>
       </div>
+      <Logo />
     </div>
   );
 };
