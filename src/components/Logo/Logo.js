@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import LogoS from '../../assets/images/o-logo.png';
 import './Logo.scss';
-import { useEffect } from 'react';
 
 const Logo = () => {
   const [show, setShow] = useState(true);
@@ -27,12 +26,6 @@ const Logo = () => {
     },
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShow(false);
-    }, 9000);
-  }, []);
-
   return (
     <div className="logo-container">
       <motion.img
@@ -51,12 +44,7 @@ const Logo = () => {
         viewBox="0 0 1029 1029"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g
-          fill="none"
-          stroke="#000"
-          stroke-width="3"
-          className={show ? 'svg-container' : 'svg-container no-show'}
-        >
+        <g fill="none" stroke="#000" stroke-width="3" className="svg-container">
           <motion.path
             variants={icon}
             initial="hidden"
